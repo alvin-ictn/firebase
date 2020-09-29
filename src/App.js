@@ -44,7 +44,19 @@ class App extends React.Component {
       .then((res) => {
         console.log(res.data());
       });
+
       fire
+      .firestore()
+      .collection("user")
+      .get()
+      .then((res) => {
+        console.log(res);
+        console.log(res.docs);
+        console.log(res.query);
+        res.forEach(item => console.log(item.w_.path.segments[6]))
+      });
+
+    fire
       .firestore()
       .collection("user")
       .doc(this.state.uid)
