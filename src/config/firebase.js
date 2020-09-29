@@ -1,16 +1,4 @@
-import firebase from 'firebase/app';
-import 'firebase/auth'
-import 'firebase/app'
-// const firebaseConfig = {
-//   apiKey: "AIzaSyBvC2JgDFRRKQhSBBUKMe9T7VaxZ6GXupU",
-//   authDomain: "lms-ga.firebaseapp.com",
-//   databaseURL: "https://lms-ga.firebaseio.com",
-//   projectId: "lms-ga",
-//   storageBucket: "lms-ga.appspot.com",
-//   messagingSenderId: "266695725453",
-//   appId: "1:266695725453:web:6d010d5eacc5f1a1376dc4",
-//   measurementId: "G-GBQJDB0JKM"
-// };
+import firebase from 'firebase';
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FB_APIKEY,
