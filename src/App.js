@@ -1,8 +1,14 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import fire from './config/firebase'
+import {firebaseAuth} from './provider/AuthProvider'
+import {Route, Switch} from 'react-router-dom'
+import Signup from './component/Signup'
 
-function App() {
+function App(){
+  const {handleSignup} = useContext(firebaseAuth)
+
   return (
     <div className="App">
       <header className="App-header">
@@ -19,8 +25,14 @@ function App() {
           Learn React
         </a>
       </header>
+      <Switch>
+        {/* route allows you to render by url path */}
+        <Route exact path='/' component={Signup} />
+      </Switch>
     </div>
+    
   );
+
 }
 
 export default App;
